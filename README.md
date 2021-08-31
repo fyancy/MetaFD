@@ -9,21 +9,30 @@ The source codes for Meta-learning for few-shot cross-domain fault diagnosis.
 # Methods
 1. CNN
 2. CNN with fine-tuning (CNN-FT) [1]
-3. CNN with Maximum Mean Discrepancy (CNN-MMD)[2]
+3. CNN with Maximum Mean Discrepancy (CNN-MMD) [2]
 4. Model Agnostic Meta-Learning (MAML) [3]
 5. Reptile [4]
 6. Memory Augmented Neural Network (MANN) [5]
 7. Prototypical Networks (ProtoNet) [6]
 8. Relation Networks (RelationNet) [7]
-**References**  
-[1] Li, F., Chen, J., Pan, J., & Pan, T. (2020). Cross-domain learning in rotating machinery fault diagnosis under various operating conditions based on parameter transfer. Measurement Science and Technology, 31(8), 085104.  
-[2] Xiao, D., Huang, Y., Zhao, L., Qin, C., Shi, H., & Liu, C. (2019). Domain adaptive motor fault diagnosis using deep transfer learning. IEEE Access, 7, 80937-80949.
-[3] Finn, C., Abbeel, P., & Levine, S. (2017, July). Model-agnostic meta-learning for fast adaptation of deep networks. In International Conference on Machine Learning (pp. 1126-1135). PMLR.  
-[4] Nichol, A., Achiam, J., & Schulman, J. (2018). On first-order meta-learning algorithms. arXiv preprint arXiv:1803.02999.  
-[5] Santoro, A., Bartunov, S., Botvinick, M., Wierstra, D., & Lillicrap, T. (2016, June). Meta-learning with memory-augmented neural networks. In International conference on machine learning (pp. 1842-1850). PMLR.  
-[6] Snell, J., Swersky, K., & Zemel, R. (2017, December). Prototypical networks for few-shot learning. In Proceedings of the 31st International Conference on Neural Information Processing Systems (pp. 4080-4090).  
-[7] Sung, F., Yang, Y., Zhang, L., Xiang, T., Torr, P. H., & Hospedales, T. M. (2018). Learning to compare: Relation network for few-shot learning. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 1199-1208).  
 
+## Tasks on CWRU bearing dataset
+T<sub>1</sub>: 10 ways, load 3 ==> 10 ways, load 0  
+T<sub>1</sub>: 6 ways, load 0 ==> 4 ways, load 0  
+Details can be found in `cwru_path.py` 
+
+**CNN**
+|Tasks|shots|Acc.(%)|Test time (s)|Trainging Time (s)|Memory (KB)|
+|:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|T<sub>1</sub>|1|71.80|	1.183|	2.484|321|
+
+**MANN**
+|Tasks|shots|Acc.(%)|Test time (s)|Trainging Time (s)|Memory (KB)|
+|:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|T<sub>1</sub>|1|	88.35|	0.12|	90|4134|
+
+
+## Feature extractor
 The backbone of these methods, i.e. feature extractor, consists of four convolution blocks, as follows
 ```python
 import torch.nn as nn
@@ -47,3 +56,13 @@ class encoder_net(nn.Module):
     def forward(self, x):
         return self.feature_net(x)
 ```
+
+
+**References**  
+[1] Li, F., Chen, J., Pan, J., & Pan, T. (2020). Cross-domain learning in rotating machinery fault diagnosis under various operating conditions based on parameter transfer. Measurement Science and Technology, 31(8), 085104.  
+[2] Xiao, D., Huang, Y., Zhao, L., Qin, C., Shi, H., & Liu, C. (2019). Domain adaptive motor fault diagnosis using deep transfer learning. IEEE Access, 7, 80937-80949.
+[3] Finn, C., Abbeel, P., & Levine, S. (2017, July). Model-agnostic meta-learning for fast adaptation of deep networks. In International Conference on Machine Learning (pp. 1126-1135). PMLR.  
+[4] Nichol, A., Achiam, J., & Schulman, J. (2018). On first-order meta-learning algorithms. arXiv preprint arXiv:1803.02999.  
+[5] Santoro, A., Bartunov, S., Botvinick, M., Wierstra, D., & Lillicrap, T. (2016, June). Meta-learning with memory-augmented neural networks. In International conference on machine learning (pp. 1842-1850). PMLR.  
+[6] Snell, J., Swersky, K., & Zemel, R. (2017, December). Prototypical networks for few-shot learning. In Proceedings of the 31st International Conference on Neural Information Processing Systems (pp. 4080-4090).  
+[7] Sung, F., Yang, Y., Zhang, L., Xiang, T., Torr, P. H., & Hospedales, T. M. (2018). Learning to compare: Relation network for few-shot learning. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 1199-1208).  
