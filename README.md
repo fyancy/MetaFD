@@ -7,6 +7,7 @@ The source codes for Meta-learning for few-shot cross-domain fault diagnosis.
 * The codes of these methods follow the idea of the original paper as far as possible, of course, for application in fault diagnosis, there are some modifications.
 
 # Methods
+```
 1. CNN
 2. CNN with fine-tuning (CNN-FT) [1]
 3. CNN with Maximum Mean Discrepancy (CNN-MMD) [2]
@@ -15,17 +16,33 @@ The source codes for Meta-learning for few-shot cross-domain fault diagnosis.
 6. Memory Augmented Neural Network (MANN) [5]
 7. Prototypical Networks (ProtoNet) [6]
 8. Relation Networks (RelationNet) [7]
-
+```
 ## Tasks on CWRU bearing dataset
-T<sub>1</sub>: 10 ways, load 3 ==> 10 ways, load 0  
-T<sub>1</sub>: 6 ways, load 0 ==> 4 ways, load 0  
+```
+T1: 10 ways, load 3 ==> 10 ways, load 0  
+T2: 6 ways, load 0 ==> 4 ways, load 0  
 Details can be found in `cwru_path.py` 
-
+```
+### CNN-based methods
 **CNN**
 |Tasks|shots|Acc.(%)|Test time (s)|Trainging Time (s)|Memory (KB)|
 |:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|T<sub>1</sub>|1|71.80|	1.183|	2.484|321|
+|T<sub>1</sub>|5|71.80|	1.183|	2.484|321|
 
+**CNN-FT**
+|Tasks|shots|Acc.(%)|Test time (s)|Trainging Time (s)|Memory (KB)|
+|:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|T<sub>1</sub>|5|	75.90|	3.995|	2.484|	321|
+|T<sub>1</sub>|1|	48.00|	3.45|	-|		321|
+|T<sub>2</sub>|5|	82.50|	5.72|	-|		225|
+|T<sub>2</sub>|1|	68.00|	4.68|	-|		225|
+
+**CNN-MMD**
+|Tasks|shots|Acc.(%)|Test time (s)|Trainging Time (s)|Memory (KB)|
+|:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|T<sub>1</sub>|5|71.80|	1.183|	2.484|321|
+
+### Meta-learning methods
 **MANN**
 |Tasks|shots|Acc.(%)|Test time (s)|Trainging Time (s)|Memory (KB)|
 |:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
@@ -59,6 +76,7 @@ class encoder_net(nn.Module):
 
 
 **References**  
+```
 [1] Li, F., Chen, J., Pan, J., & Pan, T. (2020). Cross-domain learning in rotating machinery fault diagnosis under various operating conditions based on parameter transfer. Measurement Science and Technology, 31(8), 085104.  
 [2] Xiao, D., Huang, Y., Zhao, L., Qin, C., Shi, H., & Liu, C. (2019). Domain adaptive motor fault diagnosis using deep transfer learning. IEEE Access, 7, 80937-80949.
 [3] Finn, C., Abbeel, P., & Levine, S. (2017, July). Model-agnostic meta-learning for fast adaptation of deep networks. In International Conference on Machine Learning (pp. 1126-1135). PMLR.  
@@ -66,3 +84,4 @@ class encoder_net(nn.Module):
 [5] Santoro, A., Bartunov, S., Botvinick, M., Wierstra, D., & Lillicrap, T. (2016, June). Meta-learning with memory-augmented neural networks. In International conference on machine learning (pp. 1842-1850). PMLR.  
 [6] Snell, J., Swersky, K., & Zemel, R. (2017, December). Prototypical networks for few-shot learning. In Proceedings of the 31st International Conference on Neural Information Processing Systems (pp. 4080-4090).  
 [7] Sung, F., Yang, Y., Zhang, L., Xiang, T., Torr, P. H., & Hospedales, T. M. (2018). Learning to compare: Relation network for few-shot learning. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 1199-1208).  
+```
