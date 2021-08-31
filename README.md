@@ -24,30 +24,53 @@ T2: 6 ways, load 0 ==> 4 ways, load 0
 Details can be found in `cwru_path.py` 
 ```
 ### CNN-based methods
-**CNN**
-|Tasks|shots|Acc.(%)|Test time (s)|Trainging Time (s)|Memory (KB)|
+* **CNN**
+
+|Tasks|shots|Acc.(%)|Test time (s)|Trainging time (s)|Memory (KB)|
 |:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 |T<sub>1</sub>|5|71.80|	1.183|	2.484|321|
 
-**CNN-FT**
-|Tasks|shots|Acc.(%)|Test time (s)|Trainging Time (s)|Memory (KB)|
+* **CNN-FT**
+
+|Tasks|shots|Acc.(%)|Test time (s)|Trainging time (s)|Memory (KB)|
 |:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 |T<sub>1</sub>|5|	75.90|	3.995|	2.484|	321|
 |T<sub>1</sub>|1|	48.00|	3.45|	-|		321|
 |T<sub>2</sub>|5|	82.50|	5.72|	-|		225|
 |T<sub>2</sub>|1|	68.00|	4.68|	-|		225|
 
-**CNN-MMD**
-|Tasks|shots|Acc.(%)|Test time (s)|Trainging Time (s)|Memory (KB)|
+* **CNN-MMD**
+
+|Tasks|shots|Acc.(%)|Test time (s)|Trainging time (s)|Memory (KB)|
 |:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 |T<sub>1</sub>|5|71.80|	1.183|	2.484|321|
 
 ### Meta-learning methods
-**MANN**
-|Tasks|shots|Acc.(%)|Test time (s)|Trainging Time (s)|Memory (KB)|
+* **MAML**
+
+|Tasks|shots|Acc.(%)|Test time (s)|Trainging time (s)|Memory (KB)|
+|:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|T<sub>1</sub>|5	|95.80	|5.654	|720	|321|
+|T<sub>1</sub>|1	|87.40	|4.494	|233	|321|
+|T<sub>2</sub>|5	|91.95	|6.507	|312	|225|
+|T<sub>2</sub>|1	|77.50	|4.455	|340	|225|
+
+* **Reptile**
+
+|Tasks|shots|Acc.(%)|Test time (s)|Trainging time (s)|Memory (KB)|
+|:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|T<sub>1</sub>|5	|94.6	|18.00	|1820	|321|
+|T<sub>1</sub>|1	|bad	|-	|-	|-|
+|T<sub>2</sub>|5	|91.50	|17.528	|585.6s	|225|
+|T<sub>2</sub>|1	|55.15	|17.59	|532	|30|
+
+
+
+* **MANN**
+
+|Tasks|shots|Acc.(%)|Test time (s)|Trainging time (s)|Memory (KB)|
 |:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 |T<sub>1</sub>|1|	88.35|	0.12|	90|4134|
-
 
 ## Feature extractor
 The backbone of these methods, i.e. feature extractor, consists of four convolution blocks, as follows
