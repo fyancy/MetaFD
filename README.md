@@ -23,6 +23,11 @@ T1: 10 ways, load 3 ==> 10 ways, load 0
 T2: 6 ways, load 0 ==> 4 ways, load 0  
 Details can be found in `cwru_path.py` 
 ```
+|Tasks|Source categories|Target categories|Source load|Target load|
+|:---:|---|---|:---:|:---:|
+|T1|{NC, IF1, IF2, IF3, OF1, OF2, OF3, RoF1, RoF2, RoF3 }|	{NC, IF1, IF2, …, RoF3}|	3|	0|
+|T2|{IF1, IF2, IF3, OF1, OF2, OF3}|	{NC, RoF1, RoF2, RoF3 }|	0|	0|
+
 ### CNN-based methods
 * **CNN**
 
