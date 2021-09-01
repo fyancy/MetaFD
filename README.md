@@ -90,7 +90,7 @@ Details can be found in `cwru_path.py`
 |T<sub>1</sub>|1|	88.35|	0.12|	90|4134|
 
 ## Results
-![image](https://github.com/fyancy/MetaFD/blob/main/Results_png/090113071399_0T1_5_1shot_1.Jpeg)
+<img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113071399_0T1_5_1shot_1.Jpeg" width="100" alt="微信小程序"/><br/>
 
 ## Feature extractor
 The backbone of these methods, i.e. feature extractor, consists of four convolution blocks, as follows
