@@ -89,17 +89,10 @@ Details can be found in `cwru_path.py`
 |:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 |T<sub>1</sub>|1|	88.35|	0.12|	90|4134|
 
-## Results
+## Results (Click on the image to see details)
 |Fig. 1. Model performance on T1.   | Fig. 2. Model performance on T2.  | Fig. 3. Test time and model memory.  |
 |:----:|:----:|:----:|
 |<img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113071399_0T1_5_1shot_1.Jpeg" width="300" /><br/> | <img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113074881_0T2_5_1shot_1.Jpeg" width="300" /><br/>| <img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113080127_0T1_time_memory_1.Jpeg" width="300" /><br/>|
-
-<img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113071399_0T1_5_1shot_1.Jpeg" width="300" /><br/>
-Fig. 1. Model performance on T1.  
-<img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113074881_0T2_5_1shot_1.Jpeg" width="300" /><br/>
-Fig. 2. Model performance on T2.  
-<img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113080127_0T1_time_memory_1.Jpeg" width="300" /><br/>
-Fig. 3. Test time and model memory.  
 
 ## Feature extractor
 The backbone of these methods, i.e. feature extractor, consists of four convolution blocks, as follows
