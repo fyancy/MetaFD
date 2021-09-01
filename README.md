@@ -43,7 +43,7 @@ Details can be found in `cwru_path.py`
 
 |Tasks|shots|Acc.(%)|Test time (s)|Trainging time (s)|Memory (KB)|
 |:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|T<sub>1</sub>|5|71.80|	1.183|	2.484|321|
+|T<sub>1</sub>|5|81.53|	1.164|	15.38|321|
 
 ### Meta-learning methods
 * **MAML**
