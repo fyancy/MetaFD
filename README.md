@@ -17,6 +17,30 @@ The source codes for Meta-learning for few-shot cross-domain fault diagnosis.
 7. Prototypical Networks (ProtoNet) [6]
 8. Relation Networks (RelationNet) [7]
 ```
+## Feature extractor
+The backbone of these methods, i.e. feature extractor, consists of four convolution blocks, as follows
+```python
+import torch.nn as nn
+
+def conv_block(in_channels, out_channels):
+    return nn.Sequential(
+        nn.Conv1d(in_channels, out_channels, kernel_size=3, padding=1),
+        nn.BatchNorm1d(out_channels),
+        nn.ReLU(),
+        nn.MaxPool1d(kernel_size=2),
+    )
+
+
+class encoder_net(nn.Module):
+    def __init__(self, in_chn, hidden_chn, cb_num=4):
+        super().__init__()
+        conv1 = conv_block(in_chn, hidden_chn)
+        conv1_more = [conv_block(hidden_chn, hidden_chn) for _ in range(cb_num - 1)]
+        self.feature_net = nn.Sequential(conv1, *conv1_more)  # (None, 64, 1024/2^4)
+
+    def forward(self, x):
+        return self.feature_net(x)
+```
 ## Tasks on CWRU bearing dataset
 ```
 T1: 10 ways, load 3 ==> 10 ways, load 0  
@@ -98,32 +122,6 @@ Details can be found in `cwru_path.py`
 |Fig. 1. Results on T1.   | Fig. 2. Results on T2.  | Fig. 3. Test time and model memory.  |
 |:----:|:----:|:----:|
 |<img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113071399_0T1_5_1shot_1.Jpeg" width="300" /><br/> | <img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113074881_0T2_5_1shot_1.Jpeg" width="300" /><br/>| <img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113080127_0T1_time_memory_1.Jpeg" width="300" /><br/>|
-
-## Feature extractor
-The backbone of these methods, i.e. feature extractor, consists of four convolution blocks, as follows
-```python
-import torch.nn as nn
-
-def conv_block(in_channels, out_channels):
-    return nn.Sequential(
-        nn.Conv1d(in_channels, out_channels, kernel_size=3, padding=1),
-        nn.BatchNorm1d(out_channels),
-        nn.ReLU(),
-        nn.MaxPool1d(kernel_size=2),
-    )
-
-
-class encoder_net(nn.Module):
-    def __init__(self, in_chn, hidden_chn, cb_num=4):
-        super().__init__()
-        conv1 = conv_block(in_chn, hidden_chn)
-        conv1_more = [conv_block(hidden_chn, hidden_chn) for _ in range(cb_num - 1)]
-        self.feature_net = nn.Sequential(conv1, *conv1_more)  # (None, 64, 1024/2^4)
-
-    def forward(self, x):
-        return self.feature_net(x)
-```
-
 
 **References**  
 ```
