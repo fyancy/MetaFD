@@ -52,6 +52,11 @@ Details can be found in `cwru_path.py`
 |T1|{NC, IF1, IF2, IF3, ..., RoF3 }|	{NC, IF1, IF2, IF3, ..., RoF3}|	3|	0|
 |T2|{IF1, IF2, IF3, OF1, OF2, OF3}|	{NC, RoF1, RoF2, RoF3 }|	0|	0|
 
+## Results (Click on the image to see details)
+|Fig. 1. Results on T1.   | Fig. 2. Results on T2.  | Fig. 3. Test time and model memory.  |
+|:----:|:----:|:----:|
+|<img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113071399_0T1_5_1shot_1.Jpeg" width="300" /><br/> | <img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113074881_0T2_5_1shot_1.Jpeg" width="300" /><br/>| <img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113080127_0T1_time_memory_1.Jpeg" width="300" /><br/>|
+## Result Details
 ### CNN-based methods
 * **CNN**
 
@@ -111,17 +116,11 @@ Details can be found in `cwru_path.py`
 |T<sub>2</sub>|5	|93.22	|0.19|	275|	 1339|
 |T<sub>2</sub>|1	|77.98	|0.129|	-|	 1339|
 
-
 * **MANN**
 
 |Tasks|shots|Acc.(%)|Test time (s)|Trainging time (s)|Memory (KB)|
 |:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 |T<sub>1</sub>|1|	88.35|	0.12|	90|4134|
-
-## Results (Click on the image to see details)
-|Fig. 1. Results on T1.   | Fig. 2. Results on T2.  | Fig. 3. Test time and model memory.  |
-|:----:|:----:|:----:|
-|<img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113071399_0T1_5_1shot_1.Jpeg" width="300" /><br/> | <img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113074881_0T2_5_1shot_1.Jpeg" width="300" /><br/>| <img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113080127_0T1_time_memory_1.Jpeg" width="300" /><br/>|
 
 **References**  
 ```
