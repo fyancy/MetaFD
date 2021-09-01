@@ -59,7 +59,7 @@ Details can be found in `cwru_path.py`
 
 |Tasks|shots|Acc.(%)|Test time (s)|Trainging time (s)|Memory (KB)|
 |:----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|T<sub>1</sub>|5	|94.6	|18.00	|1820	|321|
+|T<sub>1</sub>|5	|94.6	|12.04	|1820	|321|
 |T<sub>1</sub>|1	|bad	|-	|-	|-|
 |T<sub>2</sub>|5	|91.50	|17.528	|585.6s	|225|
 |T<sub>2</sub>|1	|55.15	|17.59	|532	|225|
