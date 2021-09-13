@@ -132,3 +132,12 @@ Details can be found in `cwru_path.py`
 [6] Snell, J., Swersky, K., & Zemel, R. (2017, December). Prototypical networks for few-shot learning. In Proceedings of the 31st International Conference on Neural Information Processing Systems (pp. 4080-4090).  
 [7] Sung, F., Yang, Y., Zhang, L., Xiang, T., Torr, P. H., & Hospedales, T. M. (2018). Learning to compare: Relation network for few-shot learning. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 1199-1208).  
 ```
+
+# Related work
+[1] [Semi-supervised meta-learning networks with squeeze-and-excitation attention for few-shot fault diagnosis](https://www.sciencedirect.com/science/article/abs/pii/S0019057821001543?via%3Dihub)
+[2] [Similarity-based meta-learning network with adversarial domain adaptation for cross-domain fault identification](https://www.sciencedirect.com/science/article/abs/pii/S0950705121000927?via%3Dihub)
+
+** If you have used our codes in your work, please cite the following paper.
+```
+None.
+```
