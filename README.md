@@ -1,13 +1,13 @@
 
-# Meta-Learning-in-Fault-Diagnosis
+# 1 Meta-Learning-in-Fault-Diagnosis
 The source codes for Meta-learning for few-shot cross-domain fault diagnosis.
 
-# Instructions
+# 2 Instructions
 * To run all models, the requirements of your python environmrnt are as: 1) pytorch 1.8.1+cu102; 2) tensorflow-gpu 2.4.0. Note that only `MANN` is implemented by tensorflow, all other methods are achieved by pytorch. Thus, with pytorch only, you can observe the performance of most methods on CWRU dataset.
 * Some packages you have to install: 1) tensorflow_addons (for optimizer AdamW in tensorflow. Not really necessary); 2) [learn2learn](https://github.com/learnables/learn2learn). The latter is an advanced API to achieve meta-learning methods, which is definitely compatible with pytorch. If you have problems when installing learn2learn, such as 'Microsoft Visual C++ 14.0 is required.', please refer to [this blog](https://zhuanlan.zhihu.com/p/165008313). Also, You can refer to [this blog](https://blog.csdn.net/weixin_43543177/article/details/119974019) for quick start ; 3) Visdom (for visualization).
 * The codes of these methods follow the idea of the original paper as far as possible, of course, for application in fault diagnosis, there are some modifications.
 
-# Methods
+# 3 Methods
 ```
 1. CNN
 2. CNN with fine-tuning (CNN-FT) [1]
@@ -134,7 +134,7 @@ Details can be found in `cwru_path.py`
 [7] Sung, F., Yang, Y., Zhang, L., Xiang, T., Torr, P. H., & Hospedales, T. M. (2018). Learning to compare: Relation network for few-shot learning. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 1199-1208).  
 ```
 
-# Our related work on meta-learning in fault diagnosis
+# 4 Our related work on meta-learning in fault diagnosis
 * [Semi-supervised meta-learning networks with squeeze-and-excitation attention for few-shot fault diagnosis](https://www.sciencedirect.com/science/article/abs/pii/S0019057821001543?via%3Dihub)  
 * [Similarity-based meta-learning network with adversarial domain adaptation for cross-domain fault identification](https://www.sciencedirect.com/science/article/abs/pii/S0950705121000927?via%3Dihub)  
 * [Intelligent fault diagnosis of mechanical equipment under varying working condition via iterative matching network augmented with selective Signal reuse strategy](https://www.sciencedirect.com/science/article/abs/pii/S027861252030176X)  
