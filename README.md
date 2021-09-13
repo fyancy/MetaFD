@@ -135,9 +135,10 @@ Details can be found in `cwru_path.py`
 
 # Related work
 [1] [Semi-supervised meta-learning networks with squeeze-and-excitation attention for few-shot fault diagnosis](https://www.sciencedirect.com/science/article/abs/pii/S0019057821001543?via%3Dihub)
+
 [2] [Similarity-based meta-learning network with adversarial domain adaptation for cross-domain fault identification](https://www.sciencedirect.com/science/article/abs/pii/S0950705121000927?via%3Dihub)
 
-** If you have used our codes in your work, please cite the following paper.
+* If you have used our codes in your work, please cite the following paper.
 ```
 None.
 ```
