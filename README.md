@@ -133,10 +133,14 @@ Details can be found in `cwru_path.py`
 [7] Sung, F., Yang, Y., Zhang, L., Xiang, T., Torr, P. H., & Hospedales, T. M. (2018). Learning to compare: Relation network for few-shot learning. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 1199-1208).  
 ```
 
-# Our related work
+# Our related work on meta-learning in fault diagnosis
 [1] [Semi-supervised meta-learning networks with squeeze-and-excitation attention for few-shot fault diagnosis](https://www.sciencedirect.com/science/article/abs/pii/S0019057821001543?via%3Dihub)
 
 [2] [Similarity-based meta-learning network with adversarial domain adaptation for cross-domain fault identification](https://www.sciencedirect.com/science/article/abs/pii/S0950705121000927?via%3Dihub)
+
+[3] [Intelligent fault diagnosis of mechanical equipment under varying working condition via iterative matching network augmented with selective Signal reuse strategy](https://www.sciencedirect.com/science/article/abs/pii/S027861252030176X)
+
+[4] [Intelligent Fault Diagnosis of Satellite Communication Antenna via a Novel Meta-learning Network Combining with Attention Mechanism](https://iopscience.iop.org/article/10.1088/1742-6596/1510/1/012026)
 
 If you have used our codes in your work, please cite the following paper.
 ```
