@@ -1,13 +1,13 @@
 
-# 1. Meta-Learning-in-Fault-Diagnosis
+# Meta-Learning-in-Fault-Diagnosis
 The source codes for Meta-learning for few-shot cross-domain fault diagnosis.
 
-# 2. Instructions
+# 1. Instructions
 * To run all models, the requirements of your python environmrnt are as: 1) pytorch 1.8.1+cu102; 2) tensorflow-gpu 2.4.0. Note that only `MANN` is implemented by tensorflow, all other methods are achieved by pytorch. Thus, with pytorch only, you can observe the performance of most methods on CWRU dataset.
 * Some packages you have to install: 1) tensorflow_addons (for optimizer AdamW in tensorflow. Not really necessary); 2) [learn2learn](https://github.com/learnables/learn2learn). The latter is an advanced API to achieve meta-learning methods, which is definitely compatible with pytorch. If you have problems when installing learn2learn, such as 'Microsoft Visual C++ 14.0 is required.', please refer to [this blog](https://zhuanlan.zhihu.com/p/165008313). Also, You can refer to [this blog](https://blog.csdn.net/weixin_43543177/article/details/119974019) for quick start ; 3) Visdom (for visualization).
 * The codes of these methods follow the idea of the original paper as far as possible, of course, for application in fault diagnosis, there are some modifications.
 
-# 3. Methods
+# 2. Methods
 ```
 1. CNN
 2. CNN with fine-tuning (CNN-FT) [1]
@@ -18,7 +18,7 @@ The source codes for Meta-learning for few-shot cross-domain fault diagnosis.
 7. Prototypical Networks (ProtoNet) [6]
 8. Relation Networks (RelationNet) [7]
 ```
-## 3.1 Feature extractor
+## 2.1 Feature extractor
 The backbone of these methods, i.e. feature extractor, consists of four convolution blocks, as follows
 ```python
 import torch.nn as nn
@@ -42,7 +42,7 @@ class encoder_net(nn.Module):
     def forward(self, x):
         return self.feature_net(x)
 ```
-## 3.2 Tasks on CWRU bearing dataset
+## 2.2 Tasks on CWRU bearing dataset
 ```
 T1: 10 ways, load 3 ==> 10 ways, load 0  
 T2: 6 ways, load 0 ==> 4 ways, load 0  
@@ -53,11 +53,11 @@ Details can be found in `cwru_path.py`
 |T1|{NC, IF1, IF2, IF3, ..., RoF3 }|	{NC, IF1, IF2, IF3, ..., RoF3}|	3|	0|
 |T2|{IF1, IF2, IF3, OF1, OF2, OF3}|	{NC, RoF1, RoF2, RoF3 }|	0|	0|
 
-## 3.3 Results (Click on the image to see details)
+## 2.3 Results (Click on the image to see details)
 |Fig. 1. Results on T1.   | Fig. 2. Results on T2.  | Fig. 3. Test time and model memory.  |
 |:----:|:----:|:----:|
 |<img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113071399_0T1_5_1shot_1.Jpeg" width="300" /><br/> | <img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113074881_0T2_5_1shot_1.Jpeg" width="300" /><br/>| <img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113080127_0T1_time_memory_1.Jpeg" width="300" /><br/>|
-## 3.4 Result Details
+## 2.4 Result Details
 ### CNN-based methods
 * **CNN**
 
@@ -134,7 +134,7 @@ Details can be found in `cwru_path.py`
 [7] Sung, F., Yang, Y., Zhang, L., Xiang, T., Torr, P. H., & Hospedales, T. M. (2018). Learning to compare: Relation network for few-shot learning. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 1199-1208).  
 ```
 
-# 4. Our related work on meta-learning in fault diagnosis
+# 3. Our related work on meta-learning in fault diagnosis
 * [Semi-supervised meta-learning networks with squeeze-and-excitation attention for few-shot fault diagnosis](https://www.sciencedirect.com/science/article/abs/pii/S0019057821001543?via%3Dihub)  
 * [Similarity-based meta-learning network with adversarial domain adaptation for cross-domain fault identification](https://www.sciencedirect.com/science/article/abs/pii/S0950705121000927?via%3Dihub)  
 * [Intelligent fault diagnosis of mechanical equipment under varying working condition via iterative matching network augmented with selective Signal reuse strategy](https://www.sciencedirect.com/science/article/abs/pii/S027861252030176X)  
