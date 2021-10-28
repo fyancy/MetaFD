@@ -142,5 +142,15 @@ Details can be found in `cwru_path.py`
 
 If you have used our codes in your work, please cite the following paper.
 ```
-None.
+@article{feng2021metafault,
+title = {Meta-learning as a promising approach for few-shot cross-domain fault diagnosis: Algorithms, applications, and prospects},
+journal = {Knowledge-Based Systems},
+pages = {107646},
+year = {2021},
+issn = {0950-7051},
+doi = {https://doi.org/10.1016/j.knosys.2021.107646},
+url = {https://www.sciencedirect.com/science/article/pii/S0950705121009084},
+author = {Yong Feng and Jinglong Chen and Jingsong Xie and Tianci Zhang and Haixin Lv and Tongyang Pan},
+keywords = {Meta-learning, Few-shot learning, Small sample, Cross-domain, Fault diagnosis},
+}
 ```
