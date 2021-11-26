@@ -1,3 +1,6 @@
+<a href="https://blog.csdn.net/weixin_43543177/article/details/119974019?spm=1001.2014.3001.5501" target="_blank">
+ <img align="right" src="/Results_png/head_clock.png" width="18%"/>
+</a>
 
 # Meta-Learning-in-Fault-Diagnosis
 The source codes for Meta-learning in few-shot cross-domain fault diagnosis.
