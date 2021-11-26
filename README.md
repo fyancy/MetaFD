@@ -5,6 +5,7 @@ The source codes for Meta-learning in few-shot cross-domain fault diagnosis.
 # 1. Instructions
 * To run all models, the requirements of your python environmrnt are as: 1) pytorch 1.8.1+cu102; 2) tensorflow-gpu 2.4.0. Note that only `MANN` is implemented by tensorflow, all other methods are achieved by pytorch. Thus, with pytorch only, you can observe the performance of most methods on CWRU dataset.
 * Some packages you have to install: 1) tensorflow_addons (for optimizer AdamW in tensorflow. Not really necessary); 2) [learn2learn](https://github.com/learnables/learn2learn). The latter is an advanced API to achieve meta-learning methods, which is definitely compatible with pytorch. If you have problems when installing learn2learn, such as 'Microsoft Visual C++ 14.0 is required.', please refer to [this blog](https://zhuanlan.zhihu.com/p/165008313). Also, You can refer to [this blog](https://blog.csdn.net/weixin_43543177/article/details/119974019) for quick start ; 3) Visdom (for visualization).
+* Note that the learn2learn version we used is 0.1.5, if you have issues when using learn2learn, you can use this version. Or you can modify the codes as https://github.com/fyancy/MetaFD/issues/1
 * The codes of these methods follow the idea of the original paper as far as possible, of course, for application in fault diagnosis, there are some modifications.
 
 # 2. Methods
