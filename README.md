@@ -2,8 +2,6 @@
  <img align="right" src="/Results_png/head_clock.png" width="18%"/>
 </a>
 
-
-
 # Meta-Learning-in-Fault-Diagnosis
 ![](https://img.shields.io/badge/language-python-orange.svg)
 [![](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/fyancy/MetaFD/blob/main/LICENSE)
