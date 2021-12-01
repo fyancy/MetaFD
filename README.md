@@ -66,7 +66,7 @@ Details can be found in `cwru_path.py`
 ## 2.3 Results (Click on the image to see details)
 |Fig. 1. Results on T1.   | Fig. 2. Results on T2.  | Fig. 3. Test time and model memory.  |
 |:----:|:----:|:----:|
-|<img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113071399_0T1_5_1shot_1.Jpeg" width="300" /><br/> | <img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113074881_0T2_5_1shot_1.Jpeg" width="300" /><br/>| <img src="https://github.com/fyancy/MetaFD/blob/main/Results_png/090113080127_0T1_time_memory_1.Jpeg" width="300" /><br/>|
+|<img src="/Results_png/090113071399_0T1_5_1shot_1.Jpeg" width="300" /><br/> | <img src="/Results_png/090113074881_0T2_5_1shot_1.Jpeg" width="300" /><br/>| <img src="/Results_png/090113080127_0T1_time_memory_1.Jpeg" width="300" /><br/>|
 ## 2.4 Result Details
 ### CNN-based methods
 * **CNN**
