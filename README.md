@@ -28,7 +28,7 @@ The source codes for Meta-learning in few-shot cross-domain fault diagnosis. Bas
 7. Prototypical Networks (ProtoNet) [6]
 8. Relation Networks (RelationNet) [7]
 ```
-NOTE: You can get [weights of all well-Trained models](https://drive.google.com/drive/folders/1leHVoYXpMVXM_e148KmBWVaX0WkTZfO6?usp=sharing) are available.
+**NOTE**: You can get [**weights** of all well-Trained models](https://drive.google.com/drive/folders/1leHVoYXpMVXM_e148KmBWVaX0WkTZfO6?usp=sharing) are available.
 
 ## 2.1 Feature extractor
 The backbone of these methods, i.e. feature extractor, consists of four convolution blocks, as follows
@@ -152,7 +152,7 @@ Details can be found in `cwru_path.py`
 * [Intelligent fault diagnosis of mechanical equipment under varying working condition via iterative matching network augmented with selective Signal reuse strategy](https://www.sciencedirect.com/science/article/abs/pii/S027861252030176X)  
 * [Intelligent Fault Diagnosis of Satellite Communication Antenna via a Novel Meta-learning Network Combining with Attention Mechanism](https://iopscience.iop.org/article/10.1088/1742-6596/1510/1/012026)  
 
-If you have used our codes in your work, please cite the following paper.
+If you have used our codes or pretrained models in your work, please cite our following articles.
 ```
 @article{feng2021metafault,
 title = {Meta-learning as a promising approach for few-shot cross-domain fault diagnosis: Algorithms, applications, and prospects},
