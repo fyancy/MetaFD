@@ -28,7 +28,7 @@ The source codes for Meta-learning in few-shot cross-domain fault diagnosis. Bas
 7. Prototypical Networks (ProtoNet) [6]
 8. Relation Networks (RelationNet) [7]
 ```
-**NOTE**: You can get [**weights** of all well-Trained models](https://drive.google.com/drive/folders/1leHVoYXpMVXM_e148KmBWVaX0WkTZfO6?usp=sharing) are available.
+**NOTE**: You can get [**weights** of all well-Trained models](https://drive.google.com/drive/folders/1leHVoYXpMVXM_e148KmBWVaX0WkTZfO6?usp=sharing) now.
 
 ## 2.1 Feature extractor
 The backbone of these methods, i.e. feature extractor, consists of four convolution blocks, as follows
