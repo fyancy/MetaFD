@@ -1,7 +1,7 @@
 Table 1:
 The re-organization of CWRU bearing dataset.
 
-|Class label | Fault location | Fault diameter(mil) | Load(hp)|
+|Class label | Bearing condition | Fault diameter (mil) | Load(hp)|
 |:----:|:----:|:----:|:----:|
 |0	|NC	|0	|0,1,2,3|
 |1	|IF	|7	|0,1,2,3|
