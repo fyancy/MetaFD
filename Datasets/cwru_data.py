@@ -13,7 +13,7 @@ from my_utils.init_utils import one_hot_encode, sample_label_shuffle
 from my_utils.init_utils import my_normalization as normalization
 
 N_TRAIN_EACH_CLASS = 20
-
+N_VALID_EACH_CLASS = 50 # optional
 
 class Data_CWRU:
     def __init__(self, T1=True):
@@ -87,9 +87,9 @@ class MANN_DataGenerator(Sequence):
             data = Data_CWRU().get_data(train_mode=False, n_each_class=200,
                                         sample_len=self.sample_len, normalize=True)
             if mode == 'validation':
-                self.x, self.y = data[0][:, :100], data[1][:, :100]
+                self.x, self.y = data[0][:, :N_VALID_EACH_CLASS], data[1][:, :N_VALID_EACH_CLASS]
             elif mode == 'test':
-                self.x, self.y = data[0], data[1]
+                self.x, self.y = data[0][:, N_VALID_EACH_CLASS:], data[1][:, N_VALID_EACH_CLASS:]
             else:
                 exit('Mode error')
         self.n_way = len(self.x)
@@ -142,9 +142,9 @@ class CNN_DataGenerator(Sequence):
             data = Data_CWRU().get_data(train_mode=False, n_each_class=200,
                                         sample_len=self.sample_len, normalize=True)
             if mode == 'validation':
-                self.x, self.y = data[0][:, :100], data[1][:, :100]
+                self.x, self.y = data[0][:, :N_VALID_EACH_CLASS], data[1][:, :N_VALID_EACH_CLASS]
             elif mode == 'test':
-                self.x, self.y = data[0], data[1]
+                self.x, self.y = data[0][:, N_VALID_EACH_CLASS:], data[1][:, N_VALID_EACH_CLASS:]
             else:
                 exit('Mode error')
         self.x = np.expand_dims(self.x, axis=-1)
@@ -184,11 +184,11 @@ class CNN_DataGenerator_torch(data.Dataset):
             data = Data_CWRU(self.task_mode).get_data(train_mode=False, n_each_class=200,
                                                       sample_len=self.sample_len, normalize=True)
             if mode == 'validation':
-                self.x, self.y = data[0][:, :100], data[1][:, :100]
+                self.x, self.y = data[0][:, :N_VALID_EACH_CLASS], data[1][:, :N_VALID_EACH_CLASS]
             elif mode == 'finetune':
                 self.x, self.y = data[0][:, :self.shot], data[1][:, :self.shot]
             elif mode == 'test':
-                self.x, self.y = data[0], data[1]
+                self.x, self.y = data[0][:, N_VALID_EACH_CLASS:], data[1][:, N_VALID_EACH_CLASS:]
             else:
                 exit('Mode error')
         self.x = np.expand_dims(self.x, axis=-2)
@@ -212,9 +212,9 @@ class MAML_Dataset(data.Dataset):
             data = Data_CWRU(self.task_mode).get_data(train_mode=False, n_each_class=200,
                                                       sample_len=self.sample_len, normalize=True)
             if mode == 'validation':
-                self.x, self.y = data[0][:, :100], data[1][:, :100]
+                self.x, self.y = data[0][:, :N_VALID_EACH_CLASS], data[1][:, :N_VALID_EACH_CLASS]
             elif mode == 'test':
-                self.x, self.y = data[0], data[1]
+                self.x, self.y = data[0][:, N_VALID_EACH_CLASS:], data[1][:, N_VALID_EACH_CLASS:]
             else:
                 exit('Mode error')
         # self.x = np.expand_dims(self.x, axis=-1)  # x: (n_way, n, len, 1), y: (n_way, n)
